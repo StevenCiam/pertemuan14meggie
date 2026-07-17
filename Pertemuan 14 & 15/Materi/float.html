@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Float</title>
+        <style>
+            /* 1. CSS Reset: Menghapus jarak bawaan browser agar ukuran lebih akurat */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body, html {
+                font-size: 20px;
+                font-family: Arial, sans-serif;
+                color: white;
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+            .container {
+                width: 600px;
+                margin: 50px auto;
+                border: 5px solid #333;
+                background-color: #333; /* Mengisi celah dengan warna border jika ada */
+            }
+
+            header {
+                background-color: #B063D8;
+                padding: 40px 0;
+            }
+
+            /* 2. Pengaturan Float Kiri */
+            .sidebar {
+                float: left;
+                width: 40%;
+            }
+
+            .sidebar aside {
+                background-color: #2F93FF;
+                height: 120px; /* Menetapkan tinggi pasti */
+                line-height: 120px; /* Membuat teks persis di tengah vertikal */
+            }
+            
+            .sidebar nav {
+                background-color: #E45765;
+                height: 280px; /* Menetapkan tinggi pasti */
+                line-height: 280px;
+            }
+
+            /* 3. Pengaturan Float Kanan */
+            main {
+                background-color: #E0AA77;
+                float: right;
+                width: 60%;
+                /* Tinggi total (400px) harus sama dengan ASIDE (120px) + NAV (280px) */
+                height: 400px; 
+                line-height: 400px;
+            }
+
+            /* 4. Pembersihan Float (Clearfix) */
+            footer {
+                background-color: #666;
+                padding: 20px 0;
+                clear: both; /* Memaksa footer tetap di bawah elemen yang mengambang */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>Header</header>
+            <div class="sidebar">
+               <aside>Aside</aside> 
+               <nav>Nav</nav>
+            </div>
+            <main>Main</main>
+            <footer>Footer</footer>
+        </div>
+    </body>
+</html>

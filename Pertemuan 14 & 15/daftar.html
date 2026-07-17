@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Halaman Pendaftaran</title>
+    <style>
+        /* CSS Reset dan Styling sama seperti halaman login */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .register-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+        .register-header { text-align: center; margin-bottom: 30px; }
+        .register-header h2 { color: #333; font-size: 28px; font-weight: 600; }
+        .input-group { margin-bottom: 15px; }
+        .input-group label {
+            display: block; margin-bottom: 5px; color: #666; font-size: 14px; font-weight: bold;
+        }
+        .input-group input {
+            width: 100%; padding: 12px; font-size: 14px; border: 1px solid #ccc;
+            border-radius: 6px; outline: none; transition: border-color 0.2s;
+        }
+        .input-group input:focus { border-color: #B063D8; }
+        .btn-register {
+            width: 100%; padding: 14px; background-color: #2F93FF; /* Menggunakan warna biru agar beda dengan login */
+            color: white; border: none; border-radius: 6px; font-size: 16px;
+            font-weight: bold; cursor: pointer; text-transform: uppercase;
+            transition: background-color 0.2s; margin-top: 15px;
+        }
+        .btn-register:hover { background-color: #1a78db; }
+        .register-footer { margin-top: 25px; text-align: center; font-size: 14px; color: #888; }
+        .register-footer a { color: #B063D8; text-decoration: none; font-weight: bold; }
+        .register-footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <div class="register-header">
+            <h2>BUAT AKUN BARU</h2>
+        </div>
+        
+        <form action="login.html">
+            <div class="input-group">
+                <label for="fullname">Nama Lengkap</label>
+                <input type="text" id="fullname" placeholder="Masukkan nama lengkap Anda" required>
+            </div>
+            <div class="input-group">
+                <label for="new_username">Username</label>
+                <input type="text" id="new_username" placeholder="Buat username baru" required>
+            </div>
+            <div class="input-group">
+                <label for="new_password">Password</label>
+                <input type="password" id="new_password" placeholder="Buat password" required>
+            </div>
+            
+            <button type="submit" class="btn-register">Daftar Sekarang</button>
+        </form>
+
+        <div class="register-footer">
+            <p>Sudah punya akun? <a href="login.html">Masuk di sini</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
