@@ -1,0 +1,1116 @@
+/* =========================================================
+   RESET & PENGATURAN DASAR
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+
+    /* Background putih transparan dengan gambar */
+   background-image:
+    linear-gradient(
+        rgba(255, 255, 255, 0.90),
+        rgba(255, 255, 255, 0.90)
+    ),
+    url('../images/Artikel.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #333333;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    width: 100%;
+    background-color: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 50px;
+
+    border-bottom: 4px solid #043c8f;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo h1 {
+    color: #043c8f;
+    font-size: 27px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+.logo p {
+    color: #777777;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   NAVIGASI
+========================================================= */
+
+.navbar {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.navbar a {
+    color: #333333;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    padding: 8px 5px;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #00529b;
+}
+
+
+/* =========================================================
+   BREAKING NEWS
+========================================================= */
+
+.breaking-news {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #ffffff;
+
+    margin: 25px auto;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    border-top: 3px solid crimson;
+    border-bottom: 1px solid #dddddd;
+}
+
+.breaking-title {
+    background-color: crimson;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    padding: 12px 22px;
+
+    white-space: nowrap;
+
+    z-index: 2;
+}
+
+.breaking-content {
+    flex: 1;
+
+    overflow: hidden;
+
+    color: #00529b;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   TEKS BERITA BERJALAN
+========================================================= */
+
+.ticker-list {
+    display: inline-block;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    white-space: nowrap;
+
+    animation: marquee 25s linear infinite;
+}
+
+.ticker-list li {
+    display: inline-block;
+
+    padding: 10px 40px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    color: #00529b;
+}
+
+
+/* =========================================================
+   BERITA BERHENTI SAAT KURSOR DIARAHKAN
+========================================================= */
+
+.breaking-news:hover .ticker-list {
+    animation-play-state: paused;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   ANIMASI BERITA BERJALAN
+========================================================= */
+
+@keyframes marquee {
+
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
+
+/* =========================================================
+   CONTAINER UTAMA
+========================================================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   BERITA UTAMA / HEADLINE
+========================================================= */
+
+.headline {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background-color: #ffffff;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    margin-bottom: 50px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* GAMBAR HEADLINE */
+
+.headline-image {
+    width: 100%;
+    min-height: 450px;
+}
+
+.headline-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ISI HEADLINE */
+
+.headline-content {
+    padding: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.headline-content h2 {
+    color: #043c8f;
+
+    font-size: 30px;
+
+    line-height: 1.35;
+
+    margin: 15px 0;
+}
+
+.headline-content p {
+    font-size: 15px;
+
+    text-align: justify;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   LABEL KATEGORI
+========================================================= */
+
+.label {
+    display: inline-block;
+
+    width: fit-content;
+
+    background-color: crimson;
+
+    color: white;
+
+    padding: 5px 12px;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   META / INFORMASI PENULIS
+========================================================= */
+
+.meta {
+    color: #777777;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   TOMBOL BACA SELENGKAPNYA
+========================================================= */
+
+.read-more {
+    display: inline-block;
+
+    color: #00529b;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+
+    transition: 0.3s;
+}
+
+.read-more:hover {
+    color: crimson;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   JUDUL SECTION
+========================================================= */
+
+.section-title {
+    margin-bottom: 25px;
+}
+
+.section-title h2 {
+    color: #043c8f;
+
+    font-size: 26px;
+
+    margin-bottom: 8px;
+}
+
+.line {
+    width: 70px;
+
+    height: 4px;
+
+    background-color: crimson;
+
+    border-radius: 5px;
+}
+
+
+/* =========================================================
+   GRID BERITA
+========================================================= */
+
+.news-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 60px;
+}
+
+
+/* KARTU BERITA */
+
+.news-card {
+    background-color: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ICON BERITA */
+
+.news-icon {
+    height: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #043c8f;
+
+    color: white;
+
+    font-size: 60px;
+}
+
+
+/* ISI KARTU */
+
+.news-content {
+    padding: 25px;
+}
+
+.category {
+    color: crimson;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.news-content h3 {
+    color: #043c8f;
+
+    font-size: 19px;
+
+    line-height: 1.4;
+
+    margin: 10px 0;
+}
+
+.news-content .date {
+    color: #999999;
+
+    font-size: 12px;
+
+    margin-bottom: 10px;
+}
+
+.news-content p {
+    font-size: 14px;
+
+    text-align: justify;
+
+    margin-bottom: 15px;
+}
+
+.news-content a {
+    color: #00529b;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.news-content a:hover {
+    color: crimson;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   PROFILE BOX
+========================================================= */
+
+.profile-box {
+    display: grid;
+
+    grid-template-columns: 350px 1fr;
+
+    gap: 40px;
+
+    align-items: center;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    margin-bottom: 60px;
+}
+
+
+/* FOTO PROFILE */
+
+.profile-photo img {
+    width: 280px;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+
+/* TEKS PROFILE */
+
+.profile-text h2 {
+    color: #043c8f;
+
+    font-size: 28px;
+
+    margin-bottom: 5px;
+}
+
+.profile-text h3 {
+    color: crimson;
+
+    font-size: 15px;
+
+    margin-bottom: 15px;
+}
+
+.profile-text p {
+    font-size: 14px;
+
+    text-align: justify;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   INFORMASI SINGKAT
+========================================================= */
+
+.latest-news {
+    margin-bottom: 60px;
+}
+
+.quick-info {
+    margin-bottom: 60px;
+}
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.info-card {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h3 {
+    color: #043c8f;
+
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+.info-card a {
+    color: #00529b;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 13px;
+}
+
+.info-card a:hover {
+    color: crimson;
+}
+
+
+/* =========================================================
+   HALAMAN ARTIKEL
+========================================================= */
+
+.article-page {
+    background-color: white;
+
+    padding: 45px;
+
+    margin: 40px auto 60px;
+
+    max-width: 900px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* JUDUL ARTIKEL */
+
+.article-page h1 {
+    color: #043c8f;
+
+    font-size: 34px;
+
+    line-height: 1.3;
+
+    margin-top: 20px;
+
+    margin-bottom: 10px;
+}
+
+
+/* SUB JUDUL */
+
+.article-page h2 {
+    color: #043c8f;
+
+    font-size: 24px;
+
+    margin-top: 35px;
+
+    margin-bottom: 15px;
+
+    border-left: 5px solid crimson;
+
+    padding-left: 12px;
+}
+
+
+/* PARAGRAF ARTIKEL */
+
+.article-page p {
+    font-size: 15px;
+
+    text-align: justify;
+
+    margin-bottom: 20px;
+}
+
+
+/* GAMBAR ARTIKEL */
+
+.article-image {
+    display: block;
+    width: 280px;
+    height: auto;
+    margin: 25px auto 35px;
+}
+
+
+/* =========================================================
+   TABEL MODERN
+========================================================= */
+
+.modern-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 25px 0 35px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+}
+
+.modern-table th {
+    background-color: #043c8f;
+
+    color: white;
+
+    padding: 15px;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+.modern-table td {
+    padding: 14px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 14px;
+}
+
+.modern-table tbody tr:hover {
+    background-color: #f2f8ff;
+}
+
+.modern-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   TABEL BIODATA
+========================================================= */
+
+.biodata-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 20px 0 35px;
+
+    background-color: white;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.biodata-table td {
+    padding: 14px 18px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 14px;
+}
+
+.biodata-table td:first-child {
+    width: 35%;
+
+    background-color: #f5f8fc;
+
+    color: #043c8f;
+
+    font-weight: bold;
+}
+
+.biodata-table tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   GALLERY / GALERI DESAIN
+========================================================= */
+
+/* =========================================================
+   GALLERY / HASIL DESIGN
+========================================================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 20px 0 35px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   AUDIO, VIDEO & YOUTUBE
+========================================================= */
+
+.media-box {
+    background-color: #f7f9fc;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+.media-box audio {
+    width: 100%;
+
+    max-width: 600px;
+}
+
+.media-box video {
+    width: 70%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.media-box iframe {
+    width: 100%;
+
+    max-width: 750px;
+
+    height: 420px;
+
+    border: none;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   TOMBOL KEMBALI
+========================================================= */
+
+.btn-kembali {
+    display: inline-block;
+
+    background-color: #00529b;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 18px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-kembali:hover {
+    background-color: crimson;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    background-color: #043c8f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    margin-top: 40px;
+}
+
+.footer h3 {
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.footer p {
+    font-size: 13px;
+
+    margin: 3px 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+
+    .header {
+        padding: 20px 25px;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+
+    .navbar {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .headline {
+        grid-template-columns: 1fr;
+    }
+
+
+    .headline-image {
+        min-height: 350px;
+    }
+
+
+    .news-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .profile-box {
+        grid-template-columns: 1fr;
+    }
+
+
+    .profile-photo {
+        max-width: 400px;
+
+        margin: 0 auto;
+    }
+
+
+    .info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE HP
+========================================================= */
+
+@media (max-width: 600px) {
+
+
+    body {
+        background-attachment: scroll;
+    }
+
+
+    .container {
+        width: 94%;
+    }
+
+
+    .header {
+        padding: 18px 15px;
+    }
+
+
+    .logo h1 {
+        font-size: 22px;
+    }
+
+
+    .navbar {
+        gap: 8px;
+    }
+
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+
+    .breaking-news {
+        margin: 15px auto;
+    }
+
+
+    .breaking-title {
+        padding: 10px;
+
+        font-size: 11px;
+    }
+
+
+    .headline-content {
+        padding: 25px 20px;
+    }
+
+
+    .headline-content h2 {
+        font-size: 24px;
+    }
+
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .profile-box {
+        padding: 20px;
+    }
+
+
+    .profile-photo img {
+        height: 300px;
+    }
+
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .article-page {
+        padding: 25px 20px;
+
+        margin-top: 20px;
+    }
+
+
+    .article-page h1 {
+        font-size: 26px;
+    }
+
+
+    .article-page h2 {
+        font-size: 21px;
+    }
+
+
+    .article-page p {
+        text-align: left;
+
+        font-size: 14px;
+    }
+
+
+    /* TABEL BISA DI-SCROLL DI HP */
+
+    .modern-table,
+    .biodata-table {
+        display: block;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+    }
+
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery img {
+        height: auto;
+
+        max-height: 400px;
+    }
+
+
+    .media-box iframe {
+        height: 250px;
+    }
+
+
+    .footer {
+        padding: 25px 15px;
+    }
+
+}
